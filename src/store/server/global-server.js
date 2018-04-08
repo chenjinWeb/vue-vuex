@@ -12,5 +12,10 @@ export const userlogin = (body = {}) => {
   return http.post(`/user/login`, b);
 };
 
+export const getUserInfo = (body={})=>{
+  let query = toBodyString(body);
+  return http.get(`/user/info?${query}`)
+}
+
 
 
